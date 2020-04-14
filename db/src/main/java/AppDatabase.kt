@@ -3,10 +3,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import dao.PhotoDao
+import model.AlbumView
 import model.PhotoEntity
 
-@Database(entities = [PhotoEntity::class], version = 1)
+@Database(entities = [PhotoEntity::class], views = [AlbumView::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
+
     abstract fun photoDao(): PhotoDao
 
     companion object {
