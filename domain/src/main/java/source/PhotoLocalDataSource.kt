@@ -7,6 +7,6 @@ import model.Photo
 interface PhotoLocalDataSource {
 
     suspend fun getAlbums(): Flow<List<Album>>
-    suspend fun getPhotos(albumId: Long): Flow<List<Photo>>
+    fun getPhotos(albumId: Long): Flow<List<Photo>>
     suspend fun addAllPhotos(items: List<Photo>)
 }

@@ -18,7 +18,7 @@ class PhotoLocalDataSourceImpl(private val mapperView: AlbumViewMapper, private 
             }
         }
 
-    override suspend fun getPhotos(albumId: Long): Flow<List<Photo>> =
+    override fun getPhotos(albumId: Long): Flow<List<Photo>> =
         db.photoDao().getAlbumPhotos(albumId).map { list ->
             list.map { mapper.mapFromEntity(it) }
         }
