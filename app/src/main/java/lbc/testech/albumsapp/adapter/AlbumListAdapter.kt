@@ -30,8 +30,8 @@ class AlbumListAdapter(private val albumViewModel: AlbumViewModel
         context = parent.context
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.album_item, parent, false)
-        return AlbumViewHolder(view).listen { pos, type ->
-            val album = albums.get(pos)
+        return AlbumViewHolder(view).listen { pos, _ ->
+            val album = albums[pos]
             albumViewModel.navigateToAlbumPhotos(album.id)
         }
     }

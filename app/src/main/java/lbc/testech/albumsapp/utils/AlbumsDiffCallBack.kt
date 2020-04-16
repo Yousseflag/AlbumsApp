@@ -14,10 +14,6 @@ class AlbumsDiffCallBack(private val oldAlbumList: List<Album>,
 
     override fun getNewListSize(): Int = newAlbumList.size
 
-    override fun getChangePayload(oldItemPosition: Int, newItemPosition: Int): Any? {
-        return super.getChangePayload(oldItemPosition, newItemPosition)
-    }
-
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
         oldAlbumList[oldItemPosition].photoCount == newAlbumList[newItemPosition].photoCount
 }

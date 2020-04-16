@@ -75,8 +75,7 @@ object Libraries {
     const val sharedPreferencesMock = "com.github.IvanShafran:shared-preferences-mock:${Versions.sharedPreferencesMock}"
     const val tinderStateMachine = "com.tinder.statemachine:statemachine:${Versions.tinderStateMachine}"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-    // Stetho : Debug Bridge
-    const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
 
     // Real LeakCanary for debug builds only: notifications, analysis, etc
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"

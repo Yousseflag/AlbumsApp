@@ -22,4 +22,5 @@
         <item name="android:textSize">@dimen/font_small</item>
         <item name="android:textColor">@color/whiteColor</item>
     </style>
+
 </resources>

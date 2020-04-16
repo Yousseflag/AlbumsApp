@@ -10,7 +10,15 @@ class AlbumViewModel : ViewModel() {
     val id: LiveData<Long>
         get() = _id
 
-    fun navigateToAlbumPhotos(id: Long) {
+    private var _url = MutableLiveData<String>()
+    val url: LiveData<String>
+        get() = _url
+
+    fun navigateToAlbumPhotos(id: Long) =
         _id.postValue(id)
-    }
+
+
+    fun displayPhotoWithUrl(url: String) =
+        _url.postValue(url)
+
 }

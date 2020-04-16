@@ -1,7 +1,6 @@
 package lbc.testech.albumsapp
 
 import android.app.Application
-import com.facebook.stetho.Stetho
 import di.apiModule
 import di.dataModule
 import di.domainModule
@@ -18,7 +17,6 @@ class AlbumsApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Stetho.initializeWithDefaults(this)
 
         if (GlobalContext.getOrNull() == null) { // Used to prevent Robolectric to startKoin multiple times
             startKoin {

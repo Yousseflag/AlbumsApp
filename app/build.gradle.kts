@@ -91,9 +91,7 @@ dependencies {
 
     // glide (media management and image loader )
     implementation(Libraries.glide)
-
-    // Stetho (Debug Bridge)
-    debugImplementation(Libraries.stetho)
+    kapt(Libraries.glideCompiler)
 
     // Real LeakCanary for debug builds only: notifications, analysis, etc
     debugImplementation(Libraries.leakCanary)
