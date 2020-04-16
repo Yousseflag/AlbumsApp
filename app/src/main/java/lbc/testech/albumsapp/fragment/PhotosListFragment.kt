@@ -39,7 +39,6 @@ Fragment(), KoinComponent
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_photo_list, container, false)
-        initSwipeRefreshLayout(rootView)
         initPhotosListAdapter(rootView)
         return rootView
     }
@@ -54,18 +53,11 @@ Fragment(), KoinComponent
         }
     }
 
-
     private fun initAlbumsObserver() {
         photosListViewModel.result.observe(this, Observer { result ->
-            fg_photos_srl.isRefreshing = false
             updatePhotos(result)
         })
     }
-
-    private fun initSwipeRefreshLayout(view: View?) {
-        view?.fg_photos_srl?.setDistanceToTriggerSync(SWIPE_DISTANCE_TO_SYNC)
-    }
-
     private fun initPhotosListAdapter(view: View?) {
         view?.fg_photos_rv?.adapter = adapter
         view?.fg_photos_rv?.setHasFixedSize(false)
