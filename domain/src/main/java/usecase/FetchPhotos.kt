@@ -10,7 +10,7 @@ class FetchPhotos(private val photoRepository: PhotoRepository) {
     private val logger = LoggerFactory.getLogger(FetchPhotos::class.java.simpleName)
 
     operator fun invoke(id: Long): Flow<List<Photo>> {
-        logger.debug("Fetching adult articles.")
+        logger.debug("Fetching adult photos.")
         return photoRepository.getPhotos(id)
     }
 }

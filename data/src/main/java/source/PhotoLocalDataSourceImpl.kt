@@ -1,8 +1,8 @@
 package source
 
-import AppDatabase
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import lbc.testech.albumsapp.db.AppDatabase
 import mapper.AlbumViewMapper
 import mapper.PhotoEntityMapper
 import model.Album

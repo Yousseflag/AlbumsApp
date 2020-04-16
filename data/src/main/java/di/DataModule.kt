@@ -1,5 +1,6 @@
 package di
 
+import lbc.testech.albumsapp.db.AppDatabase
 import mapper.AlbumViewMapper
 import mapper.PhotoEntityMapper
 import mapper.PhotoModelMapper
@@ -10,7 +11,7 @@ import source.PhotoLocalDataSourceImpl
 import source.PhotoRemoteDataSource
 import source.PhotoRemoteDataSourceImpl
 
-val dataModules = module {
+val dataModule = module {
 
     single { AppDatabase.getInstance(get()) }
 

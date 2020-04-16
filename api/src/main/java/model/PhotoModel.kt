@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PhotoModel (
     val id: Long,
-    val album_id: Long,
+    val albumId: Long,
     val title: String,
     val url: String,
     @SerialName("thumbnailUrl")

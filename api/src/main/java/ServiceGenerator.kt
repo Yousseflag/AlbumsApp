@@ -3,10 +3,11 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
+import okhttp3.Protocol
 import retrofit2.Retrofit
 
 object ServiceGenerator {
-    private val httpClient = OkHttpClient.Builder()
+    private val httpClient = OkHttpClient.Builder().protocols(listOf(Protocol.HTTP_1_1))
 
     private val contentType = MediaType.get("application/json")
     private val jsonConfiguration = JsonConfiguration(encodeDefaults = false, strictMode = false, indent = "    ")
