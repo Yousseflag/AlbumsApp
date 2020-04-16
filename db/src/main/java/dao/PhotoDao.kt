@@ -21,5 +21,5 @@ interface PhotoDao {
     fun getById(id: Long): Flow<PhotoEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(articles: List<PhotoEntity>)
+    fun insertAll(photos: List<PhotoEntity>)
 }

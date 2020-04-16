@@ -58,6 +58,11 @@ android {
 
 dependencies {
 
+    // Project Modules
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":api"))
+
     // Kotlin
     implementation(Libraries.kotlinStdlib)
     implementation(Libraries.coroutinesCore)

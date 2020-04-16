@@ -1,3 +1,5 @@
+package lbc.testech.albumsapp.db
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
@@ -6,7 +8,7 @@ import dao.PhotoDao
 import model.AlbumView
 import model.PhotoEntity
 
-@Database(entities = [PhotoEntity::class], views = [AlbumView::class], version = 1)
+@Database(entities = [PhotoEntity::class],views = [AlbumView::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun photoDao(): PhotoDao
@@ -27,7 +29,7 @@ abstract class AppDatabase : RoomDatabase() {
         // Create and pre-populate the database. See this article for more details:
         // https://medium.com/google-developers/7-pro-tips-for-room-fbadea4bfbd1#4785
         private fun buildDatabase(context: Context): AppDatabase {
-            return Room.databaseBuilder(context, AppDatabase::class.java, "album-db")
+            return Room.databaseBuilder(context, AppDatabase::class.java, "sample-db")
                 .fallbackToDestructiveMigration()
                 .build()
         }
