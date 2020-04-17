@@ -1,4 +1,4 @@
-package model
+package lbc.testech.albumsapp.api.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

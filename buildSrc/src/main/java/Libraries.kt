@@ -104,7 +104,7 @@ object Libraries {
         const val lifecycle = "2.2.0"
         const val materialDesign = "1.1.0-rc02"
         const val mockk = "1.9.2"
-        const val okHttp = "3.12.7"
+        const val okHttp = "3.12.0"
         const val preference = "1.0.0"
         const val recyclerView = "1.1.0"
         const val retrofit = "2.6.4"

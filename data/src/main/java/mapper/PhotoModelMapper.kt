@@ -1,7 +1,7 @@
 package mapper
 
+import lbc.testech.albumsapp.api.model.PhotoModel
 import model.Photo
-import model.PhotoModel
 
 class PhotoModelMapper : Mapper<PhotoModel, Photo> {
 

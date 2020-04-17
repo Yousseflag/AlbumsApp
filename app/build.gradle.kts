@@ -47,6 +47,7 @@ android {
 
     testOptions {
         unitTests.isIncludeAndroidResources = true
+        execution = "ANDROIDX_TEST_ORCHESTRATOR"
     }
 
     // Workaround for bug (https://github.com/Kotlin/kotlinx.coroutines/issues/1064)
@@ -114,6 +115,11 @@ dependencies {
     androidTestImplementation(Libraries.androidTestRules)
     androidTestImplementation(Libraries.espressoCore)
     androidTestImplementation(Libraries.espressoContrib)
+    androidTestImplementation(Libraries.mockWebServer)
+    androidTestImplementation((Libraries.kotlinSerialization))
+
+    androidTestUtil("androidx.test:orchestrator:1.1.0")
+
 }
 
 

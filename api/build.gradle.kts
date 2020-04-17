@@ -1,12 +1,15 @@
 import modules.LibraryModule
 import modules.LibraryType
 
-val module = LibraryModule(rootDir, LibraryType.Kotlin)
+val module = LibraryModule(rootDir, LibraryType.Android)
 
 apply(from = module.script())
 
 plugins {
-    id(BuildPlugins.Ids.kotlinJVM)
+    id(BuildPlugins.Ids.androidLibrary)
+    kotlin("android")
+    kotlin("android.extensions")
+    kotlin("kapt")
     id(BuildPlugins.Ids.kotlinxSerialization)
 }
 
